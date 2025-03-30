@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Message Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Message Messenger</h1>
+        
+        <!-- Encryption Section -->
+        <div class="section">
+            <h2>Encrypt Message</h2>
+            <textarea id="messageInput" placeholder="Type your secret message here..."></textarea>
+            <button id="encryptBtn">Encrypt</button>
+            <div class="output-group">
+                <h3>Encrypted Message:</h3>
+                <div id="encryptedOutput" class="output-box"></div>
+                <button id="copyEncrypted">Copy Encrypted Text</button>
+            </div>
+            <div class="output-group">
+                <h3>Decryption Key:</h3>
+                <div id="keyOutput" class="output-box"></div>
+                <button id="copyKey">Copy Key</button>
+            </div>
+        </div>
+
+        <!-- Decryption Section -->
+        <div class="section">
+            <h2>Decrypt Message</h2>
+            <textarea id="encryptedInput" placeholder="Paste encrypted message here..."></textarea>
+            <input type="text" id="keyInput" placeholder="Enter decryption key...">
+            <button id="decryptBtn">Decrypt</button>
+            <div class="output-group">
+                <h3>Decrypted Message:</h3>
+                <div id="decryptedOutput" class="output-box"></div>
+                <button id="copyDecrypted">Copy Decrypted Text</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
